@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSF Tech</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* FUNDO */
+body {
+  background: #02060d;
+  background-image: 
+    radial-gradient(circle at top, #0b1a2a, #02060d),
+    url('https://www.transparenttextures.com/patterns/circuit-board.png');
+  background-blend-mode: overlay;
+  color: white;
+}
+
+/* CENTRALIZAÇÃO */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* TOPO */
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero img {
+  width: 110px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+.hero span {
+  color: #00aaff;
+}
+
+.hero p {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* CARDS */
+.card {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 15px 0;
+  box-shadow: 0 0 30px rgba(0,170,255,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px rgba(0,170,255,0.4);
+}
+
+.card h2 {
+  color: #00aaff;
+  margin-bottom: 15px;
+}
+
+/* SERVIÇOS */
+.servicos li {
+  list-style: none;
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #eee;
+}
+
+.servicos li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00aaff;
+}
+
+/* CONTATO */
+.contato p {
+  margin: 5px 0;
+}
+
+/* BOTÃO */
+.btn {
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: linear-gradient(45deg, #00aaff, #0077ff);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00aaff;
+}
+
+/* WHATS FIXO */
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  padding: 15px 18px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+}
+
+/* RODAPÉ */
+footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #888;
+}
+</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- TOPO -->
+  <div class="hero">
+    <img src="logo.png" alt="Logo HSF Tech">
+    <h1><span>HSF</span> TECH</h1>
+    <p>Serviços de Manutenção e Suporte em Informática</p>
+  </div>
+
+  <!-- SERVIÇOS -->
+  <div class="card">
+    <h2>Serviços</h2>
+    <ul class="servicos">
+      <li>Formatação e instalação de sistemas</li>
+      <li>Limpeza e otimização de computadores</li>
+      <li>Configuração de rede e periféricos</li>
+      <li>Backup e recuperação de dados</li>
+      <li>Montagem e upgrade de PCs</li>
+      <li>Atualização de software e drivers</li>
+      <li>Instalação de antivírus e segurança básica</li>
+      <li>Suporte ao usuário</li>
+    </ul>
+  </div>
+
+  <!-- CONTATO -->
+  <div class="card contato">
+    <h2>Contato</h2>
+    <p><strong>Hudson Fernandes</strong></p>
+    <p>📞 91 98605-8757</p>
+    <p>💻 Atendimento: Online / Presencial</p>
+
+    <button class="btn" onclick="whatsapp()">
+      Falar no WhatsApp
+    </button>
+  </div>
+
+  <footer>
+    © 2026 HSF Tech
+  </footer>
+
+</div>
+
+<!-- BOTÃO FIXO -->
+<div class="whatsapp-fixo" onclick="whatsapp()">
+  💬
+</div>
+
+<script>
+function whatsapp() {
+  window.open("https://wa.me/5591986058757?text=Olá, vi seu site e quero um serviço", "_blank");
+}
+</script>
+
+</body>
+</html>
